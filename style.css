@@ -4,3 +4,15 @@ body {
        */
     font: 100%/1.5 system-ui;
   }
+
+  .resume-box{
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+/* 
+  This CSS resume backdrop was created with the assistance of GitHub Copilot purely for aesthetic/design choices.
+*/
