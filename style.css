@@ -7,7 +7,7 @@ body {
     background-color: black;
   }
 
-  .resume-box{
+.resume-box{
     color: black;
     background-color: #f0f0f0;
     padding: 20px;
@@ -16,6 +16,20 @@ body {
     margin: 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+.resume-header {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the header */
+}
+
+.resume-header h2 {
+    margin: 0; /* Remove default margin */
+}
+
+.resume-header p {
+    margin: 5px 0; /* Add some space between the lines */
+}
+
 /* 
-  This CSS resume backdrop was created with the assistance of GitHub Copilot purely for aesthetic/design choices.
+  This CSS Resume Modification was created with the assistance of GitHub Copilot purely for aesthetic/design choices.
 */
