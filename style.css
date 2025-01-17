@@ -136,3 +136,7 @@ label, button {
   margin-top: 0.5em; 
   margin-bottom: 0.5em; 
 }
+
+.resume-box h3 + p, .resume-box h3 + ul {
+  margin-top: 0.25em;
+}
