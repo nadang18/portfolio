@@ -8,6 +8,19 @@ body {
     padding: 1em;
   }
 
+html {
+  --color-accent: oklch(57.33% 0.1801 253.06);
+  accent-color: var(--color-accent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; 
+  text-wrap: balance;
+  h1 {
+      font-size: 400%;
+  }
+}
+
 .resume-box{
     color: black;
     background-color: lightslategray;
@@ -52,11 +65,6 @@ nav a.current {
   border-bottom-style: solid; 
   border-bottom-color: oklch(80% 3% 200); 
   padding-bottom: 0.1em; 
-}
-
-html {
-  --color-accent: oklch(57.33% 0.1801 253.06);
-  accent-color: var(--color-accent);
 }
 
 nav a:hover{
