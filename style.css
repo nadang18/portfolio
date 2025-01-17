@@ -3,13 +3,11 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
-    color: white;
-    background-color: black;
   }
 
 .resume-box{
-    color: black;
-    background-color: #f0f0f0;
+    color: white;
+    background-color: gray;
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
@@ -33,3 +31,4 @@ body {
 /* 
   This CSS Resume Modification was created with the assistance of GitHub Copilot purely for aesthetic/design choices.
 */
+
