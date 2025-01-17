@@ -140,3 +140,24 @@ label, button {
 .resume-box h3 + p, .resume-box h3 + ul {
   margin-top: 0.25em;
 }
+
+.resume-box p, .resume-box ul, .resume-box li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.resume-box section {
+  margin-bottom: 1em;
+}
+
+.resume-box article {
+  margin-bottom: 1em;
+}
+
+.resume-box ul {
+  padding-left: 1.5em;
+}
+
+.resume-box li {
+  margin-bottom: 0.25em;
+}
