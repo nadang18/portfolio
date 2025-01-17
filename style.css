@@ -161,3 +161,8 @@ label, button {
 .resume-box li {
   margin-bottom: 0.25em;
 }
+
+.resume-box a {
+  color: black;
+  text-decoration: none; 
+}
