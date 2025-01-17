@@ -3,6 +3,9 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;
+    margin-inline: auto;
+    padding: 1em;
   }
 
 .resume-box{
@@ -16,16 +19,16 @@ body {
   }
 
 .resume-header {
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add some space below the header */
+    text-align: center; 
+    margin-bottom: 20px; 
 }
 
 .resume-header h2 {
-    margin: 0; /* Remove default margin */
+    margin: 0; 
 }
 
 .resume-header p {
-    margin: 5px 0; /* Add some space between the lines */
+    margin: 5px 0; 
 }
 
 nav {
@@ -85,4 +88,5 @@ label, button {
 .projects {
   display: grid; 
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); 
+  gap: 1em;
 }
