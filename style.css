@@ -131,3 +131,8 @@ label, button {
   grid-column: 2;
   text-align: right;
 }
+
+.resume-box h2, .resume-box h3, .resume-box h4, .resume-box h5, .resume-box h6 {
+  margin-top: 0.5em; 
+  margin-bottom: 0.5em; 
+}
