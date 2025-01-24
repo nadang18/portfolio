@@ -78,3 +78,19 @@ select.addEventListener('input', function (event) {
     select.value = localStorage.colorScheme;
     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
   }
+
+  const form = document.querySelector('form');
+
+  form?.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    let url = form.action + '?';
+    for (let [name, value] of data) {
+        url = url + `${name}` + '=' + `${encodeURIComponent(value)}` + '&';
+        // console.log(name, encodeURIComponent(value));
+        // console.log(form.action);
+        console.log(url)
+      }
+      location.href = url;
+  });
+  
