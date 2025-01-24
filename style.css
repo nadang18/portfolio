@@ -170,3 +170,17 @@ label, button {
   text-decoration: none; 
   font-style: italic;
 }
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.color-scheme select {
+  margin-left: 0.5em;
+}

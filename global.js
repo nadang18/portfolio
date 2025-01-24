@@ -40,7 +40,21 @@ for (let p of pages) {
       );
 
     a.toggleAttribute('target', a.host !== location.host);
-    
+
     nav.append(a);
   }
+
+document.body.insertAdjacentHTML(
+    'afterbegin',
+    `
+    <label class="color-scheme">
+      Theme:
+      <select id="color-scheme-switch">
+        <option value="light dark">Automatic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>`
+);
+
   
