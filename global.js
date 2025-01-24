@@ -11,12 +11,14 @@ function $$(selector, context = document) {
 //   );
 
 // currentLink?.classList.add('current');
+
+
 let pages = [
     { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume/', title: 'Resume' },
-    { url: 'https://github.com/nadang18', title: 'GitHub Profile' }
+    { url: 'projects/index.html', title: 'Projects' },
+    { url: 'contact/index.html', title: 'Contact' },
+    { url: 'resume/index.html', title: 'Resume' },
+    { url: 'https://github.com/nadang18', title: 'GitHub Profile'}
   ];
 
 let nav = document.createElement('nav');
@@ -44,6 +46,8 @@ for (let p of pages) {
     nav.append(a);
   }
 
+
+// Light mode Dark mode Switch
 document.body.insertAdjacentHTML(
     'afterbegin',
     `
