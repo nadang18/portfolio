@@ -11,6 +11,8 @@ body {
 html {
   --color-accent: oklch(57.33% 0.1801 253.06);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
+  border-bottom-color: oklch(50% 10% 200 / 40%);
 }
 
 h1 {
@@ -48,6 +50,7 @@ h2, h3, h4, h5, h6 {
 }
 
 nav {
+  border-bottom-color: var(--border-color);
   display: flex;
   margin-bottom: 20px;
   border-bottom-width: 1px; 
@@ -74,7 +77,7 @@ nav a:hover{
   border-bottom-width: 0.4em;
   border-bottom-style: solid;
   border-bottom-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 input, textarea, button {
