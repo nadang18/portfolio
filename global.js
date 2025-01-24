@@ -31,6 +31,7 @@ for (let p of pages) {
     let title = p.title;
 
     url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
+    console.log(url);
 
     let a = document.createElement('a');
     a.href = url;
