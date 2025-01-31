@@ -191,12 +191,11 @@ label, button {
     gap: 1em;
 }
 
-#profile-stats dt {
-    grid-column: span 1;
-    font-weight: bold;
+#profile-stats dl {
+    display: contents;
 }
 
-#profile-stats dd {
-    grid-column: span 1;
+#profile-stats dt, #profile-stats dd {
+    text-align: center;
     margin: 0;
 }
