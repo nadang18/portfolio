@@ -96,38 +96,36 @@ select.addEventListener('input', function (event) {
   
 export async function fetchJSON(url) {
   try {
-      // Fetch the JSON file from the given URL
-      const response = await fetch(url);
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
 
-      // Check if the fetch request was successful
-      if (!response.ok) {
-          throw new Error(`Failed to fetch projects: ${response.statusText}`);
-      }
+    // Check if the fetch request was successful
+    if (!response.ok) {
+        throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
 
-      // Parse the response into JSON format
-      const data = await response.json();
-      return data;
+    // Parse the response into JSON format
+    const data = await response.json();
+    console.log(data);
+    return data;
 
   } catch (error) {
       console.error('Error fetching or parsing JSON data:', error);
   }
 }
 
-export function renderProjects(project, containerElement, headingLevel = 'h2') {
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
     // Clear existing content
     containerElement.innerHTML = '';
 
-    for (let proj in project) {
-      // Create an article element for the project
-      const article = document.createElement('article');
-
-      article.innerHTML = `
-          <${headingLevel}>${proj.title}</${headingLevel}>
-          <img src="${proj.image}" alt="${proj.title}">
-          <p>${proj.description}</p>
-      `;
-
-      // Append the article to the container element
-      containerElement.appendChild(article);
-    }
+    // Loop through each project and create an article element
+    projects.forEach(project => {
+        const article = document.createElement('article');
+        article.innerHTML = `
+            <${headingLevel}>${project.title}</${headingLevel}>
+            <img src="${project.image}" alt="${project.title}">
+            <p>${project.description}</p>
+        `;
+        containerElement.appendChild(article);
+    });
 }
