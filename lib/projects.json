@@ -9,13 +9,13 @@
     "title": "Suburban Cities Weather Analysis.",
     "year": "2025",
     "image": "https://cdn-icons-png.freepik.com/256/1164/1164940.png?semt=ais_hybrid",
-    "description": "A visual analysis of rainfall and sunshine weather pattern in six suburban cities across the United States."
+    "description": "A visual analysis of rainfall and sunshine weather pattern in six suburban cities across the United States. Visual analsysis aims to provide insights on weather pattern throughout a typucal year that viewers can easily understand."
   },
   {
-    "title": "Omnis incidunt labore nisi?",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Illo fuga ad quaerat natus, accusantium est quibusdam iste voluptatem porro alias doloribus, vero dolores pariatur. Vero, consequatur dolore. Consequatur obcaecati nostrum reiciendis suscipit minus ea facere enim laboriosam ut?"
+    "title": "Taylor Swift Songs: Lyric Finder",
+    "year": "2023",
+    "image": "https://images.district.net/image/b4a69017-1820-40bd-9015-00cb16818c06.jpg?width=256&quality=70&format=auto",
+    "description": "A python project that uses naive language model to identify lyrics of Taylor Swift songs. The project aims to demonstrate a simple and effective language model that matches a piece of text to specific songs it belongs to."
   },
   {
     "title": "Saepe quidem hic officiis.",
