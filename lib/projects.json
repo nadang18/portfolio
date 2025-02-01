@@ -18,22 +18,22 @@
     "description": "A python project that uses naive language model to identify lyrics of Taylor Swift songs. The project aims to demonstrate a simple and effective language model that matches a piece of text to specific songs it belongs to."
   },
   {
-    "title": "Saepe quidem hic officiis.",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Facilis expedita similique eius quam ducimus numquam illum, velit debitis impedit veniam totam rem odit cumque, voluptate perferendis aperiam optio dicta culpa reiciendis deleniti? Exercitationem labore sed repellendus praesentium at?"
+    "title": "NGRAM Language Learning Model",
+    "year": "2024",
+    "image": "https://cdn-icons-png.flaticon.com/256/1829/1829939.png",
+    "description": "A python project on naive language learning model using NGram modeling. The project employs webscraping to collect text data from online libraries and uses NGram model to predict or generate words to build sentences."
   },
   {
-    "title": "Molestias velit exercitationem dolore.",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Voluptate expedita deleniti eos perferendis reiciendis facere doloribus possimus, est ad dolores iste magnam culpa ipsa commodi excepturi rem quo omnis quod architecto. Aut mollitia alias facere nobis inventore totam?"
+    "title": "Calculator App",
+    "year": "2021",
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/18/1c/f9/181cf987-1eaf-fcea-a984-539b72be3db9/AppIcon-0-0-1x_U007epad-0-1-0-P3-0-85-220.png/256x256bb.jpg",
+    "description": "A python project building a basic and functional scientific calculator application."
   },
   {
-    "title": "Amet temporibus ducimus necessitatibus?",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Odit asperiores reiciendis nihil quasi minima, necessitatibus aliquid illo numquam? Voluptatum perspiciatis accusantium veritatis vitae provident quibusdam mollitia nemo alias dolorum neque. Nesciunt, non corporis excepturi qui eveniet nulla commodi!"
+    "title": "Machine Learning: Hand Written Digit Recognition",
+    "year": "2023",
+    "image": "https://pi.math.cornell.edu/~mec/2006-2007/Games/sums.png",
+    "description": "A machine learning project that uses KNN nearest neighbor algorithm to recognize hand written digits. The project aims to demonstrate the application of machine learning in recognizing human written input."  
   },
   {
     "title": "Earum doloremque adipisci ratione?",
@@ -42,33 +42,33 @@
     "description": "Cum in natus, id asperiores nesciunt eligendi, architecto, molestias aliquid blanditiis fugiat nihil. Aliquam, suscipit eveniet. Dolorem blanditiis, eligendi dicta quod eos similique soluta quo, dignissimos beatae, autem ullam minima!"
   },
   {
-    "title": "Ipsam assumenda nisi ipsa.",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Molestias impedit, aperiam voluptates eum incidunt similique soluta, dolor iure pariatur exercitationem neque dolores earum nobis totam enim quis doloribus vel fugit quo rem cupiditate illum voluptatibus voluptate. Cumque, aut."
+    "title": "Personal Attribute: How Personality Affects Music Taste",
+    "year": "2022",
+    "image": "https://cdn-icons-png.freepik.com/256/16991/16991066.png?semt=ais_hybrid",
+    "description": "A standard procedural data gathering thought project that aims to understand how personality traits affect music taste. The project uses a survey to collect data and analyze the relationship between personality traits and music taste."
   },
   {
-    "title": "Tempore sapiente dignissimos perspiciatis?",
+    "title": "Cardiovascular Visual Analysis: Sudden Cardiac Death Assessment",
     "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Harum, molestiae vitae? Ea repudiandae eum labore provident, architecto eius esse nobis reiciendis quae odio recusandae, laudantium, fugit consequatur. Quae nostrum obcaecati fugiat deserunt. Quae adipisci omnis commodi quisquam quo?"
+    "image": "https://cdn-icons-png.flaticon.com/256/883/883309.png",
+    "description": "A visual analysis project using Tableau that aims to provide interesting insights on patterns in suddent cardiac death and its relationship with different factors. The project uses data from the study of MUerte Subita en Insuficiencia Cardiaca."
   },
   {
-    "title": "Eaque ex eos minima?",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Non ducimus quasi vero nemo perspiciatis beatae labore blanditiis ad, eligendi ratione, veniam accusantium nihil atque maxime odio error magnam neque perferendis placeat, molestias omnis ea repudiandae. Id, vero labore."
+    "title": "Single Linkage Clustering",
+    "year": "2024",
+    "image": "https://seeingdata.org/wp-content/uploads/2015/02/M4-part3-scatter.png",
+    "description": "A python project that analyze a weighted graph and find clusters of nodes that are closely connected. The project uses a recursive algorithm to find clusters of nodes that are closely connected to each other."
   },
   {
-    "title": "Incidunt, rem? Tenetur, non?",
-    "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Architecto ullam excepturi rem, eos ad animi quibusdam ab perspiciatis sunt aspernatur fugiat laudantium facilis ex, ratione corporis vitae molestias velit natus. Voluptatem, facilis? Nihil ex quas aliquam molestias excepturi?"
+    "title": "Pokemon Encounter: Hypothesis Testing",
+    "year": "2023",
+    "image": "https://cdn-icons-png.flaticon.com/256/361/361998.png",
+    "description": "A python project that employs hypothesis testing and permutation testing to analyze encounter rate of different pokemons in the Pokemon Red. This project uses native python code."
   },
   {
-    "title": "Dignissimos excepturi temporibus aspernatur.",
+    "title": "SQL Database: Flight System Management",
     "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Sed laudantium error hic vero velit minima debitis ducimus asperiores adipisci iure, eveniet excepturi accusantium dolorum ratione voluptas quidem corrupti? Earum qui aliquid natus maiores perferendis provident voluptates veniam consequuntur!"
+    "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bd/32/7a/bd327a10-1428-c49d-0d20-d29693eeb61c/AppIcon-0-0-1x_U007epad-0-0-85-220.jpeg/256x256bb.jpg",
+    "description": "SQL project that builds and import data to a flight log database system. The project runs basic queries to demonstrate the functionality of the database system."
   }
 ]
