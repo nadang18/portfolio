@@ -36,10 +36,10 @@
     "description": "A machine learning project that uses KNN nearest neighbor algorithm to recognize hand written digits. The project aims to demonstrate the application of machine learning in recognizing human written input."  
   },
   {
-    "title": "Earum doloremque adipisci ratione?",
+    "title": "SQL Database: Music Catalog Management",
     "year": "2025",
-    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-    "description": "Cum in natus, id asperiores nesciunt eligendi, architecto, molestias aliquid blanditiis fugiat nihil. Aliquam, suscipit eveniet. Dolorem blanditiis, eligendi dicta quod eos similique soluta quo, dignissimos beatae, autem ullam minima!"
+    "image": "https://cdn.iconscout.com/icon/free/png-256/free-spotify-logo-icon-download-in-svg-png-gif-file-formats--brand-social-media-pack-logos-icons-2641594.png?f=webp",
+    "description": "SQL project that builds and import data to a music catalog database system. The project runs basic queries to demonstrate the functionality of the database system."
   },
   {
     "title": "Personal Attribute: How Personality Affects Music Taste",
