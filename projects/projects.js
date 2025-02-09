@@ -30,7 +30,7 @@ function renderPieChart(projectsGiven) {
   let arcData = sliceGenerator(data);
   let arcs = arcData.map((d) => arcGenerator(d));
 
-  // Use D3's color scale
+  
   let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
   // Clear existing paths and legend items
@@ -39,7 +39,7 @@ function renderPieChart(projectsGiven) {
 
   let svg = d3.select('svg');
 
-  // Render updated pie chart
+ 
   arcs.forEach((arc, i) => {
     svg
       .append('path')
@@ -78,10 +78,10 @@ function renderPieChart(projectsGiven) {
   });
 }
 
-// Initial render of the pie chart and legend
+
 renderPieChart(projects);
 
-// Search functionality
+
 let query = '';
 let searchInput = document.querySelector('.searchBar');
 
@@ -101,5 +101,3 @@ searchInput.addEventListener('change', (event) => {
   // render updated pie chart and legend
   renderPieChart(filteredProjects);
 });
-
-
