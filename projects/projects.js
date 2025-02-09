@@ -11,15 +11,17 @@ document.querySelector('.header').textContent = projects.length + ' Projects';
 // D3.js
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
-// Pie chart with labels
-let data = [
-  { value: 1, label: 'apples' },
-  { value: 2, label: 'oranges' },
-  { value: 3, label: 'mangos' },
-  { value: 4, label: 'pears' },
-  { value: 5, label: 'limes' },
-  { value: 5, label: 'cherries' },
-];
+// Group projects by year and count the number of projects in each year
+let rolledData = d3.rollups(
+  projects,
+  (v) => v.length,
+  (d) => d.year,
+);
+
+// Convert the rolled data to the required format
+let data = rolledData.map(([year, count]) => {
+  return { value: count, label: year };
+});
 
 let sliceGenerator = d3.pie().value((d) => d.value);
 let arcData = sliceGenerator(data);
