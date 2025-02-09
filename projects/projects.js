@@ -10,6 +10,7 @@ document.querySelector('.header').textContent = projects.length + ' Projects';
 
 // D3.js
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+let selectedIndex = -1;
 
 // Function to render the pie chart and legend
 function renderPieChart(projectsGiven) {
@@ -36,21 +37,44 @@ function renderPieChart(projectsGiven) {
   d3.select('svg').selectAll('path').remove();
   d3.select('.legend').selectAll('li').remove();
 
+  let svg = d3.select('svg');
+
   // Render updated pie chart
-  arcs.forEach((arc, idx) => {
-      d3.select('svg')
-        .append('path')
-        .attr('d', arc)
-        .attr('fill', colors(idx)); 
+  arcs.forEach((arc, i) => {
+    svg
+      .append('path')
+      .attr('d', arc)
+      .attr('fill', colors(i))
+      .attr('class', i === selectedIndex ? 'selected' : '')
+      .on('click', () => {
+        selectedIndex = selectedIndex === i ? -1 : i;
+        
+        svg
+          .selectAll('path')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'selected' : ''));
+
+        d3.select('.legend')
+          .selectAll('li')
+          .attr('class', (_, idx) => (idx === selectedIndex ? 'legend-item selected' : 'legend-item'));
+
+        // Filter projects based on the selected year
+        if (selectedIndex === -1) {
+          renderProjects(projects, projectsContainer, 'h2');
+        } else {
+          let selectedYear = data[selectedIndex].label;
+          let filteredProjects = projects.filter((project) => project.year === selectedYear);
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
+      });
   });
 
   // Render updated legend
   data.forEach((d, idx) => {
-      d3.select('.legend')
-        .append('li')
-        .attr('style', `--color:${colors(idx)}`)
-        .attr('class', 'legend-item')
-        .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+    d3.select('.legend')
+      .append('li')
+      .attr('style', `--color:${colors(idx)}`)
+      .attr('class', idx === selectedIndex ? 'legend-item selected' : 'legend-item')
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
   });
 }
 
@@ -77,4 +101,5 @@ searchInput.addEventListener('change', (event) => {
   // render updated pie chart and legend
   renderPieChart(filteredProjects);
 });
+
 

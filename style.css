@@ -264,4 +264,21 @@ svg {
   border-radius: 50%;
 }
 
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(40% 0 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
+}
+
 
