@@ -8,15 +8,8 @@ renderProjects(projects, projectsContainer, 'h2');
 // Project count on the header
 document.querySelector('.header').textContent = projects.length + ' Projects';
 
-
 // D3.js
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-// let arc = arcGenerator({
-//     startAngle: 0,
-//     endAngle: 2 * Math.PI,
-//   });
-// d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
-
 
 // Pie chart with labels
 let data = [
@@ -46,7 +39,7 @@ let legend = d3.select('.legend');
 data.forEach((d, idx) => {
     legend.append('li')
           .attr('style', `--color:${colors(idx)}`)
-          .attr('class', 'legend-item') // Add class for styling
+          .attr('class', 'legend-item')
           .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
 });
 
