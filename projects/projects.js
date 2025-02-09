@@ -18,28 +18,35 @@ let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 // d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
 
 
-// Pie chart
-let data = [1, 2];
-let total = 0;
-let colors = ['gold', 'purple'];
+// Pie chart with labels
+let data = [
+  { value: 1, label: 'apples' },
+  { value: 2, label: 'oranges' },
+  { value: 3, label: 'mangos' },
+  { value: 4, label: 'pears' },
+  { value: 5, label: 'limes' },
+  { value: 5, label: 'cherries' },
+];
 
-for (let d of data) {
-  total += d;
-}
-let angle = 0;
-let arcData = [];
-
-for (let d of data) {
-  let endAngle = angle + (d / total) * 2 * Math.PI;
-  arcData.push({ startAngle: angle, endAngle });
-  angle = endAngle;
-}
-
+let sliceGenerator = d3.pie().value((d) => d.value);
+let arcData = sliceGenerator(data);
 let arcs = arcData.map((d) => arcGenerator(d));
+
+// Use D3's color scale
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
 arcs.forEach((arc, idx) => {
     d3.select('svg')
       .append('path')
       .attr('d', arc)
-      .attr('fill', colors[idx])
-})
+      .attr('fill', colors(idx)); 
+});
+
+let legend = d3.select('.legend');
+data.forEach((d, idx) => {
+    legend.append('li')
+          .attr('style', `--color:${colors(idx)}`)
+          .attr('class', 'legend-item') // Add class for styling
+          .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`);
+});
 
