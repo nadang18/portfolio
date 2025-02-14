@@ -13,8 +13,8 @@ async function loadData() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
+  displayStats(); // Call displayStats after data is loaded
 })
-
 
 let commits = d3.groups(data, (d) => d.commit);
 
@@ -60,6 +60,13 @@ function displayStats() {
     // Add total commits
     dl.append('dt').text('Total commits');
     dl.append('dd').text(commits.length);
-  
-    // Add more stats as needed...
+
+    // Add number of files
+    const numFiles = d3.groups(data, (d) => d.file).length;
+    dl.append("dt").text("Number of Files");
+    dl.append("dd").text(numFiles);
 }
+
+// FOR SCATTERPLOT
+const width = 1000;
+const height = 600;
