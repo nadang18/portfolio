@@ -312,4 +312,8 @@ path {
   text-align: center;
 }
 
-
+.gridlines line {
+  stroke: lightgray;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
