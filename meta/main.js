@@ -15,6 +15,11 @@ async function loadData() {
         datetime: new Date(row.datetime),
     }));
 
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadData();
+  });
+
     processCommits();
     displayStats();
     createScatterplot();
@@ -65,3 +70,4 @@ function displayStats() {
   dl.append("dt").text("Average Line Length (chars)");
   dl.append("dd").text(avgLineLength.toFixed(2));
 }
+
