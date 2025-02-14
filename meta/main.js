@@ -132,7 +132,13 @@ dots
   .attr('cx', (d) => xScale(d.datetime))
   .attr('cy', (d) => yScale(d.hourFrac))
   .attr('r', 5)
-  .attr('fill', 'steelblue');
+  .attr('fill', 'steelblue')
+  .on('mouseenter', (event, commit) => {
+    updateTooltipContent(commit);
+  })
+  .on('mouseleave', () => {
+    updateTooltipContent({}); // Clear tooltip content
+  });
 
 // Add gridlines BEFORE the axes
 const gridlines = svg
@@ -143,5 +149,19 @@ const gridlines = svg
 // Create gridlines as an axis with no labels and full-width ticks
 gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 }
+
+// FOR TOOLTIP
+function updateTooltipContent(commit) {
+    const link = document.getElementById('commit-link');
+    const date = document.getElementById('commit-date');
+  
+    if (Object.keys(commit).length === 0) return;
+  
+    link.href = commit.url;
+    link.textContent = commit.id;
+    date.textContent = commit.datetime?.toLocaleString('en', {
+      dateStyle: 'full',
+    });
+  }
 
 

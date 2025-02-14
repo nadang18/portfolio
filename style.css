@@ -317,3 +317,13 @@ path {
   stroke-opacity: 0.7;
   shape-rendering: crispEdges;
 }
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
