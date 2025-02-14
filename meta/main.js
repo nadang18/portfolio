@@ -14,7 +14,6 @@ async function loadData() {
 document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
   displayStats(); // Call displayStats after data is loaded
-  createScatterplot(); // Call createScatterplot after data is loaded
 })
 
 let commits = d3.groups(data, (d) => d.commit);
@@ -69,9 +68,7 @@ function displayStats() {
 }
 
 // FOR SCATTERPLOT
-function createScatterplot() {
-  // Create the scatterplot
-  const width = 1000;
+const width = 1000;
 const height = 600;
 
 const svg = d3
@@ -132,13 +129,7 @@ dots
   .attr('cx', (d) => xScale(d.datetime))
   .attr('cy', (d) => yScale(d.hourFrac))
   .attr('r', 5)
-  .attr('fill', 'steelblue')
-  .on('mouseenter', (event, commit) => {
-    updateTooltipContent(commit);
-  })
-  .on('mouseleave', () => {
-    updateTooltipContent({}); // Clear tooltip content
-  });
+  .attr('fill', 'steelblue');
 
 // Add gridlines BEFORE the axes
 const gridlines = svg
@@ -148,20 +139,6 @@ const gridlines = svg
 
 // Create gridlines as an axis with no labels and full-width ticks
 gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
-}
 
-// FOR TOOLTIP
-function updateTooltipContent(commit) {
-    const link = document.getElementById('commit-link');
-    const date = document.getElementById('commit-date');
-  
-    if (Object.keys(commit).length === 0) return;
-  
-    link.href = commit.url;
-    link.textContent = commit.id;
-    date.textContent = commit.datetime?.toLocaleString('en', {
-      dateStyle: 'full',
-    });
-  }
 
 
