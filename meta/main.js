@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadData();
   displayStats(); // Call displayStats after data is loaded
   createScatterplot();
+  brushSelector(); // Call brushSelector after creating the scatterplot
 })
 
 let commits = d3.groups(data, (d) => d.commit);
@@ -71,7 +72,7 @@ function displayStats() {
 // FOR SCATTERPLOT
 function createScatterplot() {
     // Create the scatterplot
-    const width = 1000;
+  const width = 1000;
   const height = 600;
   const svg = d3
     .select('#chart')
@@ -154,13 +155,14 @@ function createScatterplot() {
   gridlines.call(d3.axisLeft(yScale).tickFormat('').tickSize(-usableArea.width));
 }
 
+
+// FOR TOOLTIP
 function updateTooltipPosition(event) {
   const tooltip = document.getElementById('commit-tooltip');
   tooltip.style.left = `${event.clientX}px`;
   tooltip.style.top = `${event.clientY}px`;
 }
 
-// FOR TOOLTIP
 function updateTooltipContent(commit) {
     const link = document.getElementById('commit-link');
     const date = document.getElementById('commit-date');
@@ -180,3 +182,84 @@ function updateTooltipVisibility(isVisible) {
 }
 
 
+// FOR BRUSH
+function brushSelector() {
+  const svg = document.querySelector('svg');
+  d3.select(svg).call(d3.brush().on('start brush end', brushed));
+
+  // Raise dots and everything after overlay
+  d3.select(svg).selectAll('.dots, .overlay ~ *').raise();
+}
+
+let brushSelection = null;
+
+function brushed(event) {
+  brushSelection = event.selection;
+  updateSelection();
+  updateSelectionCount(); // Call updateSelectionCount inside brushed
+  updateLanguageBreakdown(); // Call updateLanguageBreakdown inside brushed
+}
+
+function updateSelectionCount() {
+  const selectedCommits = brushSelection
+    ? commits.filter(isCommitSelected)
+    : [];
+
+  const countElement = document.getElementById('selection-count');
+  countElement.textContent = `${
+    selectedCommits.length || 'No'
+  } commits selected`;
+
+  return selectedCommits;
+}
+
+function isCommitSelected(commit) {
+  if (!brushSelection) {
+    return false;
+  }
+  const [[x0, y0], [x1, y1]] = brushSelection;
+  const x = d3.scaleTime().domain(d3.extent(commits, (d) => d.datetime)).range([0, 1000]);
+  const y = d3.scaleLinear().domain([0, 24]).range([600, 0]);
+  return x(commit.datetime) >= x0 && x(commit.datetime) <= x1 && y(commit.hourFrac) >= y0 && y(commit.hourFrac) <= y1;
+}
+
+function updateSelection() {
+  // Update visual state of dots based on selection
+  d3.selectAll('circle').classed('selected', (d) => isCommitSelected(d));
+}
+
+function updateLanguageBreakdown() {
+  const selectedCommits = brushSelection
+    ? commits.filter(isCommitSelected)
+    : [];
+  const container = document.getElementById('language-breakdown');
+
+  if (selectedCommits.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+  const requiredCommits = selectedCommits.length ? selectedCommits : commits;
+  const lines = requiredCommits.flatMap((d) => d.lines);
+
+  // Use d3.rollup to count lines per language
+  const breakdown = d3.rollup(
+    lines,
+    (v) => v.length,
+    (d) => d.type
+  );
+
+  // Update DOM with breakdown
+  container.innerHTML = '';
+
+  for (const [language, count] of breakdown) {
+    const proportion = count / lines.length;
+    const formatted = d3.format('.1~%')(proportion);
+
+    container.innerHTML += `
+            <dt>${language}</dt>
+            <dd>${count} lines (${formatted})</dd>
+        `;
+  }
+
+  return breakdown;
+}
