@@ -3,13 +3,34 @@
     "title": "League of Legends: Win Lost Ratio Analysis",
     "year": "2024",
     "image": "https://miro.medium.com/v2/resize:fit:512/1*ACj2f50_tcFzJvgwGeenvg.png",
-    "description": "A comprehensive analysis of the win lost ratio of the game League of Legends. The analysis includes the win lost ratio of the game in different match scenarios, simulating the balance of difference objectives within the game."
+    "description": "A comprehensive analysis of the win lost ratio of the game League of Legends. The analysis includes the win lost ratio of the game in different match scenarios, simulating the balance of difference objectives within the game.",
+    "url": "https://nadang18.github.io/LoL-Statistic-Analysis/"
+  },
+  {
+    "title": "Alcohol and Cardiac Risk: An Interactive Analysis",
+    "year": "2025",
+    "image": "https://cdn-icons-png.flaticon.com/256/1410/1410636.png",
+    "description": "An interactive web application that visualizes the relationship between alcohol consumption and cardiac risk. The project uses data from the MUerte Subita en Insuficiencia Cardiaca study of Spain to provide insights on the relationship between alcohol consumption and cardiac risk.",
+    "url": "https://nadang18.github.io/Interactive-Cardio-Health-Analysis/"
+  },
+  {
+    "title": "Bike Path Traffic Visualizer",
+    "year": "2025",
+    "image": "https://cdn-icons-png.freepik.com/256/5266/5266164.png?semt=ais_hybrid",
+    "description": "A web application for an interactive visualization for bike path traffic. The project highlights bike path and denotes traffic around bike stops with color notation depiciting the level of traffic.",
+    "url": "https://nadang18.github.io/Interactive-Traffic-Map/"
   },
   {
     "title": "Suburban Cities Weather Analysis",
     "year": "2025",
     "image": "https://cdn-icons-png.freepik.com/256/1164/1164940.png?semt=ais_hybrid",
     "description": "A visual analysis of rainfall and sunshine weather pattern in six suburban cities across the United States. Visual analsysis aims to provide insights on weather pattern throughout a typucal year that viewers can easily understand."
+  },
+  {
+    "title": "Cardiovascular Visual Analysis: Sudden Cardiac Death Assessment",
+    "year": "2025",
+    "image": "https://cdn-icons-png.flaticon.com/256/883/883309.png",
+    "description": "A visual analysis project using Tableau that aims to provide interesting insights on patterns in suddent cardiac death and its relationship with different factors. The project uses data from the study of MUerte Subita en Insuficiencia Cardiaca."
   },
   {
     "title": "Taylor Swift Songs: Lyric Finder",
@@ -46,12 +67,6 @@
     "year": "2022",
     "image": "https://cdn-icons-png.freepik.com/256/16991/16991066.png?semt=ais_hybrid",
     "description": "A standard procedural data gathering thought project that aims to understand how personality traits affect music taste. The project uses a survey to collect data and analyze the relationship between personality traits and music taste."
-  },
-  {
-    "title": "Cardiovascular Visual Analysis: Sudden Cardiac Death Assessment",
-    "year": "2025",
-    "image": "https://cdn-icons-png.flaticon.com/256/883/883309.png",
-    "description": "A visual analysis project using Tableau that aims to provide interesting insights on patterns in suddent cardiac death and its relationship with different factors. The project uses data from the study of MUerte Subita en Insuficiencia Cardiaca."
   },
   {
     "title": "Single Linkage Clustering",
